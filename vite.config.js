@@ -3,9 +3,10 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [react()],
   server: {
     port: 6000,
-    host: "0.0.0.0", // Sangat penting agar bisa diakses via IP VPS
+    host: "0.0.0.0", // Ini krusial agar bisa diakses secara network
+    strictPort: true,
   },
-  plugins: [react()],
 });
