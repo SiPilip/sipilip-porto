@@ -1,0 +1,557 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Project Detail - SIPAHADI Bengkulu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c7a15c",
+              "background-light": "#f8f7f6",
+              "background-dark": "#1f1b14",
+              "background-darker": "#16130e",
+              "surface-dark": "#2a241b",
+            },
+            fontFamily: {
+              display: ["Public Sans", "sans-serif"],
+            },
+            backgroundImage: {
+              "batik-pattern":
+                "url('data:image/svg+xml,%3Csvg width=\\'60\\' height=\\'60\\' viewBox=\\'0 0 60 60\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'none\\' fill-rule=\\'evenodd\\'%3E%3Cg fill=\\'%23c7a15c\\' fill-opacity=\\'0.05\\'%3E%3Cpath d=\\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-[#1f1b14] dark:text-white"
+  >
+    <!-- Background Pattern -->
+    <div
+      class="fixed inset-0 pointer-events-none z-0 bg-batik-pattern opacity-100 mix-blend-overlay"
+    ></div>
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <!-- Navigation -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-[#40392b] bg-background-dark/95 backdrop-blur-sm"
+      >
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-3">
+          <div class="flex items-center justify-between whitespace-nowrap">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-6 text-primary">
+                <span class="material-symbols-outlined !text-2xl"
+                  >terminal</span
+                >
+              </div>
+              <h2
+                class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Philifs Bryan
+              </h2>
+            </div>
+            <div class="flex flex-1 justify-end gap-8">
+              <div class="hidden md:flex items-center gap-9">
+                <a
+                  class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                  href="#"
+                  >Home</a
+                >
+                <a
+                  class="text-primary text-sm font-medium leading-normal"
+                  href="#"
+                  >Projects</a
+                >
+                <a
+                  class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal"
+                  href="#"
+                  >Skills</a
+                >
+              </div>
+              <button
+                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 bg-primary text-background-dark text-sm font-bold leading-normal hover:bg-[#b08d4b] transition-colors"
+              >
+                <span class="truncate">Contact</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main
+        class="flex-grow w-full max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12"
+      >
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="flex mb-6 text-sm text-gray-400">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a
+                class="inline-flex items-center hover:text-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-lg mr-2">home</span>
+                Home
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-lg mx-1"
+                  >chevron_right</span
+                >
+                <a class="hover:text-primary transition-colors" href="#"
+                  >Projects</a
+                >
+              </div>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <span class="material-symbols-outlined text-lg mx-1"
+                  >chevron_right</span
+                >
+                <span class="text-primary font-medium">SIPAHADI Bengkulu</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+        <!-- Page Heading & Actions -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8"
+        >
+          <div class="flex flex-col gap-2">
+            <h1
+              class="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight"
+            >
+              SIPAHADI Bengkulu
+            </h1>
+            <p
+              class="text-[#beb29d] text-lg font-normal leading-normal max-w-2xl"
+            >
+              Sistem Pengelolaan Arsip Lembaga Pemasyarakatan — A comprehensive
+              digital archive management system for correctional facilities.
+            </p>
+          </div>
+          <div class="flex gap-3">
+            <button
+              class="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal hover:bg-[#b08d4b] transition-all shadow-lg shadow-primary/20"
+            >
+              <span class="material-symbols-outlined text-xl">preview</span>
+              <span>Live Preview</span>
+            </button>
+            <button
+              class="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 border border-primary text-primary text-base font-bold leading-normal hover:bg-primary/10 transition-all"
+            >
+              <span class="material-symbols-outlined text-xl">code</span>
+              <span>Source Code</span>
+            </button>
+          </div>
+        </div>
+        <!-- Hero Image -->
+        <div
+          class="relative w-full aspect-video md:aspect-[21/9] rounded-xl overflow-hidden shadow-2xl border border-[#40392b] bg-surface-dark group mb-12"
+        >
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            data-alt="Modern dashboard interface showing charts and data tables on a dark background"
+            style="
+              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBQOdt2Z69E58wHM0waDm5A98LMuf2IG-A00PZo_yoY8Hzkg8h-8iwOTTCeGcz-GCCi35YqphcqgziusRLYfnQhKKtwZE_m3AgYaBlF3NS4lg2XJHTDWwcyO5QMb_F7Lc4pjkx_Mz1KTr2lquTxaZcxiqXHVUooetl2ycsH4HPlGKjxxdVyG0JiFrUDYbl1Iu4peoKgiw8H1TEPeGC-clXtlEGZRt6P_xgv_XqGWyrTrFgkqdipr_3Pg3v3fPxxvU54qh9u8Uuecl4&quot;);
+            "
+          ></div>
+          <!-- Gradient Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent"
+          ></div>
+          <!-- Floating Info Badge -->
+          <div
+            class="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-surface-dark/90 backdrop-blur border border-[#40392b] rounded-lg p-3 flex items-center gap-3"
+          >
+            <div class="bg-primary/20 p-2 rounded-md text-primary">
+              <span class="material-symbols-outlined">dashboard</span>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-400 uppercase tracking-wider font-semibold"
+              >
+                Status
+              </p>
+              <p class="text-sm font-bold text-white">Production Ready</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <!-- Main Content Column -->
+          <div class="lg:col-span-8 flex flex-col gap-10">
+            <!-- Overview Section -->
+            <section>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="h-px flex-1 bg-[#40392b]"></span>
+                <h2 class="text-primary text-2xl font-bold tracking-tight">
+                  Project Purpose
+                </h2>
+                <span class="h-px flex-3 bg-[#40392b] w-12"></span>
+              </div>
+              <div class="text-[#e0dcd5] text-lg leading-relaxed space-y-4">
+                <p>
+                  The Correctional Institution Archive Management System
+                  (SIPAHADI) was conceptualized to solve the critical issue of
+                  physical document degradation and slow retrieval times in
+                  Bengkulu's correctional facilities.
+                </p>
+                <p>
+                  Prior to this system, archive retrieval could take hours.
+                  SIPAHADI digitizes the entire workflow, reducing retrieval
+                  time to seconds while ensuring data integrity through strictly
+                  role-based access controls. The platform serves
+                  administrators, staff, and auditors with a unified, secure
+                  interface.
+                </p>
+              </div>
+            </section>
+            <!-- Key Features Grid -->
+            <section>
+              <div class="flex items-center gap-3 mb-6">
+                <span class="h-px flex-1 bg-[#40392b]"></span>
+                <h2 class="text-primary text-2xl font-bold tracking-tight">
+                  Key Features
+                </h2>
+                <span class="h-px flex-3 bg-[#40392b] w-12"></span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Feature 1 -->
+                <div
+                  class="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors"
+                >
+                  <div
+                    class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4"
+                  >
+                    <span class="material-symbols-outlined">shield_lock</span>
+                  </div>
+                  <h3 class="text-white text-lg font-bold mb-2">
+                    Secure Access Control
+                  </h3>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Implemented JWT authentication with role-based middleware to
+                    ensure sensitive inmate records are only accessible to
+                    authorized personnel.
+                  </p>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                  class="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors"
+                >
+                  <div
+                    class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4"
+                  >
+                    <span class="material-symbols-outlined"
+                      >folder_managed</span
+                    >
+                  </div>
+                  <h3 class="text-white text-lg font-bold mb-2">
+                    Digital Archiving
+                  </h3>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Automated document scanning integration and metadata tagging
+                    for instant categorization of thousands of physical records.
+                  </p>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                  class="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors"
+                >
+                  <div
+                    class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4"
+                  >
+                    <span class="material-symbols-outlined">manage_search</span>
+                  </div>
+                  <h3 class="text-white text-lg font-bold mb-2">
+                    Real-time Search
+                  </h3>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Advanced search functionality utilizing MongoDB indexing to
+                    filter results by inmate ID, date, or case type instantly.
+                  </p>
+                </div>
+                <!-- Feature 4 -->
+                <div
+                  class="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors"
+                >
+                  <div
+                    class="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4"
+                  >
+                    <span class="material-symbols-outlined">analytics</span>
+                  </div>
+                  <h3 class="text-white text-lg font-bold mb-2">
+                    Statistical Dashboard
+                  </h3>
+                  <p class="text-gray-400 text-sm leading-relaxed">
+                    Visual analytics for prison population trends and case
+                    processing efficiency, empowering data-driven decisions.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- Role Section -->
+            <section>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="h-px flex-1 bg-[#40392b]"></span>
+                <h2 class="text-primary text-2xl font-bold tracking-tight">
+                  My Role
+                </h2>
+                <span class="h-px flex-3 bg-[#40392b] w-12"></span>
+              </div>
+              <div
+                class="bg-surface-dark rounded-xl p-6 border border-[#40392b] relative overflow-hidden"
+              >
+                <!-- Decorative element -->
+                <div class="absolute top-0 right-0 p-4 opacity-5">
+                  <span class="material-symbols-outlined text-[120px]"
+                    >person</span
+                  >
+                </div>
+                <p
+                  class="text-[#e0dcd5] text-lg leading-relaxed mb-4 relative z-10"
+                >
+                  As the Lead Full-Stack Developer, I was responsible for the
+                  end-to-end development lifecycle. My primary focus was
+                  architecting a scalable backend using Node.js and designing an
+                  intuitive React frontend.
+                </p>
+                <ul class="space-y-3 relative z-10">
+                  <li class="flex items-start gap-3 text-gray-300">
+                    <span
+                      class="material-symbols-outlined text-primary text-sm mt-1"
+                      >check_circle</span
+                    >
+                    <span
+                      >Designed the RESTful API architecture and database
+                      schema.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3 text-gray-300">
+                    <span
+                      class="material-symbols-outlined text-primary text-sm mt-1"
+                      >check_circle</span
+                    >
+                    <span
+                      >Implemented the responsive UI using React and Tailwind
+                      CSS.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3 text-gray-300">
+                    <span
+                      class="material-symbols-outlined text-primary text-sm mt-1"
+                      >check_circle</span
+                    >
+                    <span
+                      >Collaborated with prison staff to conduct user acceptance
+                      testing (UAT).</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- Gallery / Screenshots -->
+            <section>
+              <div class="flex items-center gap-3 mb-6">
+                <span class="h-px flex-1 bg-[#40392b]"></span>
+                <h2 class="text-primary text-2xl font-bold tracking-tight">
+                  Interface Gallery
+                </h2>
+                <span class="h-px flex-3 bg-[#40392b] w-12"></span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="group relative rounded-lg overflow-hidden border border-[#40392b]"
+                >
+                  <div
+                    class="w-full bg-cover bg-center aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+                    data-alt="Screenshot of the secure login page with batik background elements"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBTNSKuoGxRvvBszDKnFc7AHTVvv1R9Iz_DnMnYJNZWZ2Tl725FXpkrGPdwEt7r9p1RY6zV38ZtD8AfijNjf4i8ejZcIJGPvPGw0-BbdKYTf62_Bao43zTn4mG0OrzRQCCscYJW-70LT4VRVQWg1lzVwDo0rqSw5pm2zf_yWZ7_izVjf62C_vBxRQBMI9H5iLi5pC5hJyN75f7G-Gkx_bJEVouFucM6DHlQk25GDiZDB7AwHorEMQ9o4EnsOxX2vCm7WhqvYo11P7I&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 w-full bg-black/70 p-3 backdrop-blur-sm"
+                  >
+                    <p class="text-white text-sm font-medium">
+                      Secure Login Portal
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="group relative rounded-lg overflow-hidden border border-[#40392b]"
+                >
+                  <div
+                    class="w-full bg-cover bg-center aspect-[4/3] transition-transform duration-500 group-hover:scale-105"
+                    data-alt="Screenshot of list view of archived documents with search filters"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC_Qsy1qQ2lpSvOGtmEil_95urwTDe_nA7bvjelXZE0JlIsY_v3ttp-MmoxocT5Z9W4cRhdoOifaYGoeAU5BGMtMLLnoFZ0HKlCgQ9vGAfCPK1BXX9LRXOsmLn3oI-jcfqe7dKs-_OW5wmJGizHFGnCkLXhVsaVnBVX4Py5NfUVvVsUCPNjzekadMQo_25TKo3-TiopwHPGOImnCNjEgwWqQU2Cp7xZhx6PoVRCMBlDAT48huF_im9gl_0rEQZFaa0oE80uarZEYkg&quot;);
+                    "
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 w-full bg-black/70 p-3 backdrop-blur-sm"
+                  >
+                    <p class="text-white text-sm font-medium">
+                      Archive List View
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- Sidebar Column -->
+          <div class="lg:col-span-4 flex flex-col gap-6">
+            <!-- Tech Stack Card -->
+            <div
+              class="bg-surface-dark border border-[#40392b] rounded-xl p-6 sticky top-24"
+            >
+              <h3
+                class="text-white text-xl font-bold mb-6 border-b border-[#40392b] pb-3"
+              >
+                Tech Stack
+              </h3>
+              <div class="space-y-4">
+                <!-- MongoDB -->
+                <div class="flex items-center gap-4 group">
+                  <div
+                    class="w-10 h-10 rounded bg-[#1e2a22] flex items-center justify-center border border-[#40392b] group-hover:border-green-500 transition-colors"
+                  >
+                    <!-- Abstract SVG for DB icon representation -->
+                    <span class="material-symbols-outlined text-green-500"
+                      >database</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">MongoDB</h4>
+                    <p class="text-xs text-gray-500">NoSQL Database</p>
+                  </div>
+                </div>
+                <!-- Express -->
+                <div class="flex items-center gap-4 group">
+                  <div
+                    class="w-10 h-10 rounded bg-[#2a2a2a] flex items-center justify-center border border-[#40392b] group-hover:border-white transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-white"
+                      >dns</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">Express.js</h4>
+                    <p class="text-xs text-gray-500">Backend Framework</p>
+                  </div>
+                </div>
+                <!-- React -->
+                <div class="flex items-center gap-4 group">
+                  <div
+                    class="w-10 h-10 rounded bg-[#1f262e] flex items-center justify-center border border-[#40392b] group-hover:border-blue-400 transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-blue-400"
+                      >code_blocks</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">React</h4>
+                    <p class="text-xs text-gray-500">Frontend Library</p>
+                  </div>
+                </div>
+                <!-- Node -->
+                <div class="flex items-center gap-4 group">
+                  <div
+                    class="w-10 h-10 rounded bg-[#1e2a1f] flex items-center justify-center border border-[#40392b] group-hover:border-green-600 transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-green-600"
+                      >terminal</span
+                    >
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">Node.js</h4>
+                    <p class="text-xs text-gray-500">Runtime Environment</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8 pt-6 border-t border-[#40392b]">
+                <h3 class="text-white text-base font-bold mb-3">
+                  Project Info
+                </h3>
+                <div class="grid grid-cols-1 gap-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-400 text-sm">Client</span>
+                    <span class="text-white text-sm text-right"
+                      >Lapas Bengkulu</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-400 text-sm">Timeline</span>
+                    <span class="text-white text-sm text-right">3 Months</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-400 text-sm">Year</span>
+                    <span class="text-white text-sm text-right">2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Footer -->
+      <footer
+        class="border-t border-[#40392b] bg-background-darker mt-12 py-10 relative z-10"
+      >
+        <div class="max-w-[1120px] mx-auto px-4 text-center">
+          <div class="flex flex-col items-center gap-4 mb-6">
+            <div class="size-8 text-primary">
+              <span class="material-symbols-outlined !text-3xl">terminal</span>
+            </div>
+            <p class="text-white text-lg font-bold">Philifs Bryan Sipahutar</p>
+            <p class="text-gray-500 text-sm max-w-md">
+              Building digital experiences with modern technologies and a touch
+              of elegance.
+            </p>
+          </div>
+          <div class="flex justify-center gap-6 mb-8">
+            <a
+              class="text-gray-400 hover:text-primary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">mail</span></a
+            >
+            <a
+              class="text-gray-400 hover:text-primary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">code</span></a
+            >
+            <a
+              class="text-gray-400 hover:text-primary transition-colors"
+              href="#"
+              ><span class="material-symbols-outlined">link</span></a
+            >
+          </div>
+          <p class="text-gray-600 text-sm">
+            © 2024 Philifs Bryan. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
