@@ -24,5 +24,7 @@ dist-ssr
 *.sln
 *.sw?
 
+reference_html/
+
 # Reference HTML files (optional, but keeping them out of repo if desired, usually good to keep for reference though. Uncomment if you want to ignore)
 # reference_html/

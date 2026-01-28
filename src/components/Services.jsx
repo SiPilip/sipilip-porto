@@ -14,16 +14,15 @@ const Services = () => {
         <div className="lg:w-1/2 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-wider uppercase">
             <span className="size-2 rounded-full bg-primary animate-pulse"></span>
-            Available for new projects
+            Tersedia untuk proyek baru
           </div>
           <h2 className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
-            Technical <span className="text-primary">Expertise</span> &amp;
-            Services
+            <span className="text-primary">Keahlian</span> Teknis &amp; Layanan
           </h2>
           <p className="text-gray-400 text-lg leading-relaxed max-w-xl">
-            Professional portfolio showcasing full-stack capabilities. I craft
-            scalable web applications using the MERN stack with a focus on
-            performance, clean code, and elegant UI.
+            Portofolio profesional yang menampilkan kemampuan full-stack. Saya
+            menyusun aplikasi web berskala besar menggunakan MERN stack dengan
+            fokus pada performa, kode yang bersih, dan UI yang elegan.
           </p>
         </div>
         {/* Skills Chips */}
@@ -32,7 +31,7 @@ const Services = () => {
             <span className="material-symbols-outlined text-primary">
               terminal
             </span>
-            Core Technologies
+            Teknologi Inti
           </h3>
           <div className="flex flex-wrap gap-3">
             {[
@@ -68,14 +67,15 @@ const Services = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-3">
-              Services Offered
+              Layanan Kami
             </h2>
             <p className="text-gray-400">
-              Comprehensive development solutions tailored to your needs.
+              Solusi pengembangan komprehensif yang disesuaikan dengan kebutuhan
+              Anda.
             </p>
           </div>
           <button className="hidden md:flex items-center gap-2 text-primary hover:text-white transition-colors font-medium">
-            View full pricing
+            Lihat harga lengkap
             <span className="material-symbols-outlined">arrow_forward</span>
           </button>
         </div>
@@ -93,20 +93,20 @@ const Services = () => {
               </span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">
-              Custom Web Apps
+              Web App Kustom
             </h3>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Tailor-made web applications built with React and Next.js,
-              focusing on responsive design and seamless user experience.
+              Aplikasi web yang dibuat khusus menggunakan React dan Next.js,
+              berfokus pada desain responsif dan pengalaman pengguna yang mulus.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-center gap-2 text-sm text-gray-300">
-                <span className="size-1.5 bg-primary rounded-full"></span> SPA
-                &amp; PWA Development
+                <span className="size-1.5 bg-primary rounded-full"></span>{" "}
+                Pengembangan SPA &amp; PWA
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-300">
                 <span className="size-1.5 bg-primary rounded-full"></span>{" "}
-                Dashboard Interfaces
+                Antarmuka Dashboard
               </li>
             </ul>
           </div>
@@ -123,20 +123,20 @@ const Services = () => {
               </span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">
-              Internal Systems
+              Sistem Internal
             </h3>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Robust backend solutions and internal tools designed to streamline
-              business operations and data management.
+              Solusi backend yang kuat dan alat internal yang dirancang untuk
+              merampingkan operasional bisnis dan manajemen data.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-center gap-2 text-sm text-gray-300">
-                <span className="size-1.5 bg-primary rounded-full"></span> Admin
-                Panels
+                <span className="size-1.5 bg-primary rounded-full"></span> Panel
+                Admin
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-300">
                 <span className="size-1.5 bg-primary rounded-full"></span>{" "}
-                Database Architecture
+                Arsitektur Database
               </li>
             </ul>
           </div>
@@ -151,11 +151,11 @@ const Services = () => {
               <span className="material-symbols-outlined text-3xl">api</span>
             </div>
             <h3 className="text-xl font-bold mb-3 text-white">
-              API Development
+              Pengembangan API
             </h3>
             <p className="text-gray-400 leading-relaxed mb-6">
-              Secure and scalable RESTful and GraphQL APIs to power your
-              applications and integrate third-party services.
+              RESTful dan GraphQL API yang aman dan dapat diskalakan untuk
+              memperkuat aplikasi Anda serta integrasi pihak ketiga.
             </p>
             <ul className="space-y-2 mb-6">
               <li className="flex items-center gap-2 text-sm text-gray-300">
@@ -164,7 +164,7 @@ const Services = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-gray-300">
                 <span className="size-1.5 bg-primary rounded-full"></span>{" "}
-                Third-party Integrations
+                Integrasi Pihak Ketiga
               </li>
             </ul>
           </div>

@@ -1,14 +1,55 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import portfolioData from "../data/portfolio.json";
+
+// Helper map for Tech Stack icons/colors
+// Helper map for Tech Stack icons/colors
+const techConfig = {
+  React: { icon: "code_blocks", color: "text-blue-400" },
+  "Node.js": { icon: "terminal", color: "text-green-600" },
+  MongoDB: { icon: "database", color: "text-green-500" },
+  "Express.js": { icon: "dns", color: "text-white" },
+  Mapbox: { icon: "map", color: "text-blue-300" },
+  "Tailwind CSS": { icon: "style", color: "text-cyan-400" },
+  Laravel: { icon: "code", color: "text-red-500" },
+  "Vue.js": { icon: "code_blocks", color: "text-green-400" },
+  "PHP Native": { icon: "php", color: "text-purple-400" },
+  "CodeIgniter 4": { icon: "fire_hydrant", color: "text-orange-500" },
+  Bootstrap: { icon: "style", color: "text-purple-500" },
+  MySQL: { icon: "database", color: "text-blue-500" },
+  PostgreSQL: { icon: "database", color: "text-blue-300" },
+  Redis: { icon: "database", color: "text-red-500" },
+  jQuery: { icon: "javascript", color: "text-blue-400" },
+  "Next.js": { icon: "layers", color: "text-white" },
+  Strapi: { icon: "api", color: "text-blue-500" },
+  Golang: { icon: "code", color: "text-cyan-500" },
+  default: { icon: "memory", color: "text-gray-400" },
+};
 
 const ProjectDetail = () => {
+  const { slug } = useParams();
+  const project = portfolioData.find((p) => p.slug === slug);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [slug]);
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background-dark text-white">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Proyek Tidak Ditemukan</h1>
+          <Link to="/" className="text-primary hover:underline">
+            Kembali ke Beranda
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-[#1f1b14] dark:text-white">
-      {/* Simplified Navbar for Detail Page (or import existing Navbar if adapted) */}
+      {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b border-[#40392b] bg-background-dark/95 backdrop-blur-sm">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-10 py-3">
           <div className="flex items-center justify-between whitespace-nowrap">
@@ -19,7 +60,7 @@ const ProjectDetail = () => {
                 </span>
               </div>
               <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">
-                Back to Portfolio
+                Kembali ke Portofolio
               </h2>
             </Link>
           </div>
@@ -41,7 +82,7 @@ const ProjectDetail = () => {
                 <span className="material-symbols-outlined text-lg mr-2">
                   home
                 </span>
-                Home
+                Beranda
               </Link>
             </li>
             <li>
@@ -50,7 +91,7 @@ const ProjectDetail = () => {
                   chevron_right
                 </span>
                 <span className="text-primary font-medium">
-                  SIPAHADI Bengkulu
+                  {project.title}
                 </span>
               </div>
             </li>
@@ -65,26 +106,43 @@ const ProjectDetail = () => {
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
               <h1 className="text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
-                SIPAHADI Bengkulu
+                {project.title}
               </h1>
               <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">
-                2023
+                {project.year}
               </span>
             </div>
+            {project.client && (
+              <div className="flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+                <span className="material-symbols-outlined text-lg">
+                  business_center
+                </span>
+                {project.client}
+              </div>
+            )}
             <p className="text-[#beb29d] text-lg font-normal leading-normal max-w-2xl">
-              Sistem Pengelolaan Arsip Lembaga Pemasyarakatan — A comprehensive
-              digital archive management system for correctional facilities.
+              {project.shortDescription}
             </p>
           </div>
           <div className="flex gap-3">
-            <button className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal hover:bg-[#b08d4b] transition-all shadow-lg shadow-primary/20">
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal hover:bg-[#b08d4b] transition-all shadow-lg shadow-primary/20"
+            >
               <span className="material-symbols-outlined text-xl">preview</span>
-              <span>Live Preview</span>
-            </button>
-            <button className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 border border-primary text-primary text-base font-bold leading-normal hover:bg-primary/10 transition-all">
+              <span>Pratinjau</span>
+            </a>
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 border border-primary text-primary text-base font-bold leading-normal hover:bg-primary/10 transition-all"
+            >
               <span className="material-symbols-outlined text-xl">code</span>
-              <span>Source Code</span>
-            </button>
+              <span>Kode Sumber</span>
+            </a>
           </div>
         </div>
 
@@ -94,13 +152,11 @@ const ProjectDetail = () => {
           data-aos="zoom-in"
           data-aos-delay="100"
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-            style={{
-              backgroundImage:
-                'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQOdt2Z69E58wHM0waDm5A98LMuf2IG-A00PZo_yoY8Hzkg8h-8iwOTTCeGcz-GCCi35YqphcqgziusRLYfnQhKKtwZE_m3AgYaBlF3NS4lg2XJHTDWwcyO5QMb_F7Lc4pjkx_Mz1KTr2lquTxaZcxiqXHVUooetl2ycsH4HPlGKjxxdVyG0JiFrUDYbl1Iu4peoKgiw8H1TEPeGC-clXtlEGZRt6P_xgv_XqGWyrTrFgkqdipr_3Pg3v3fPxxvU54qh9u8Uuecl4")',
-            }}
-          ></div>
+          <img
+            src={project.heroImage}
+            alt={project.title}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-surface-dark/90 backdrop-blur border border-[#40392b] rounded-lg p-3 flex items-center gap-3">
             <div className="bg-primary/20 p-2 rounded-md text-primary">
@@ -108,89 +164,85 @@ const ProjectDetail = () => {
             </div>
             <div>
               <p className="text-xs text-gray-400 uppercase tracking-wider font-semibold">
-                Status
+                Kategori
               </p>
-              <p className="text-sm font-bold text-white">Production Ready</p>
+              <p className="text-sm font-bold text-white">{project.category}</p>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-8 flex flex-col gap-10">
+            {/* Description Section */}
             <section data-aos="fade-up">
               <div className="flex items-center gap-3 mb-4">
                 <span className="h-px flex-1 bg-[#40392b]"></span>
                 <h2 className="text-primary text-2xl font-bold tracking-tight">
-                  Project Purpose
+                  Deskripsi Proyek
                 </h2>
                 <span className="h-px flex-3 bg-[#40392b] w-12"></span>
               </div>
-              <div className="text-[#e0dcd5] text-lg leading-relaxed space-y-4">
-                <p>
-                  The Correctional Institution Archive Management System
-                  (SIPAHADI) was conceptualized to solve the critical issue of
-                  physical document degradation and slow retrieval times in
-                  Bengkulu's correctional facilities.
-                </p>
-                <p>
-                  Prior to this system, archive retrieval could take hours.
-                  SIPAHADI digitizes the entire workflow, reducing retrieval
-                  time to seconds while ensuring data integrity through strictly
-                  role-based access controls.
-                </p>
+              <div className="text-[#e0dcd5] text-lg leading-relaxed space-y-4 whitespace-pre-line">
+                <p>{project.description}</p>
               </div>
             </section>
 
+            {/* Features Section */}
             <section data-aos="fade-up">
               <div className="flex items-center gap-3 mb-6">
                 <span className="h-px flex-1 bg-[#40392b]"></span>
                 <h2 className="text-primary text-2xl font-bold tracking-tight">
-                  Key Features
+                  Fitur Utama
                 </h2>
                 <span className="h-px flex-3 bg-[#40392b] w-12"></span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  {
-                    icon: "shield_lock",
-                    title: "Secure Access Control",
-                    desc: "JWT authentication with role-based middleware for secure access.",
-                  },
-                  {
-                    icon: "folder_managed",
-                    title: "Digital Archiving",
-                    desc: "Automated document scanning integration and metadata tagging.",
-                  },
-                  {
-                    icon: "manage_search",
-                    title: "Real-time Search",
-                    desc: "Advanced search functionality using MongoDB indexing.",
-                  },
-                  {
-                    icon: "analytics",
-                    title: "Statistical Dashboard",
-                    desc: "Visual analytics for prison population trends.",
-                  },
-                ].map((feature, idx) => (
+                {project.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors"
+                    className="bg-surface-dark p-5 rounded-lg border border-[#40392b] hover:border-primary/50 transition-colors flex items-start gap-4"
                   >
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-4">
+                    <div className="bg-primary/10 min-w-10 h-10 rounded-lg flex items-center justify-center text-primary">
                       <span className="material-symbols-outlined">
-                        {feature.icon}
+                        check_circle
                       </span>
                     </div>
-                    <h3 className="text-white text-lg font-bold mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {feature.desc}
-                    </p>
+                    <div>
+                      <h3 className="text-white text-lg font-bold leading-tight">
+                        {feature}
+                      </h3>
+                    </div>
                   </div>
                 ))}
               </div>
             </section>
+
+            {/* Gallery Section */}
+            {project.images && project.images.length > 0 && (
+              <section data-aos="fade-up">
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="h-px flex-1 bg-[#40392b]"></span>
+                  <h2 className="text-primary text-2xl font-bold tracking-tight">
+                    Galeri
+                  </h2>
+                  <span className="h-px flex-3 bg-[#40392b] w-12"></span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {project.images.map((img, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-lg overflow-hidden border border-[#40392b] hover:border-primary/50 transition-all group"
+                    >
+                      <img
+                        src={img}
+                        alt={`Gallery ${idx + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           <div className="lg:col-span-4 flex flex-col gap-6">
@@ -202,48 +254,25 @@ const ProjectDetail = () => {
                 Tech Stack
               </h3>
               <div className="space-y-4">
-                {[
-                  {
-                    icon: "database",
-                    name: "MongoDB",
-                    type: "NoSQL Database",
-                    color: "text-green-500",
-                  },
-                  {
-                    icon: "dns",
-                    name: "Express.js",
-                    type: "Backend Framework",
-                    color: "text-white",
-                  },
-                  {
-                    icon: "code_blocks",
-                    name: "React",
-                    type: "Frontend Library",
-                    color: "text-blue-400",
-                  },
-                  {
-                    icon: "terminal",
-                    name: "Node.js",
-                    type: "Runtime Environment",
-                    color: "text-green-600",
-                  },
-                ].map((stack, idx) => (
-                  <div key={idx} className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded bg-[#1e2a22] flex items-center justify-center border border-[#40392b] transition-colors">
-                      <span
-                        className={`material-symbols-outlined ${stack.color}`}
-                      >
-                        {stack.icon}
-                      </span>
+                {project.techStack.map((stackName, idx) => {
+                  const tech = techConfig[stackName] || techConfig.default;
+                  return (
+                    <div key={idx} className="flex items-center gap-4 group">
+                      <div className="w-10 h-10 rounded bg-[#1e2a22] flex items-center justify-center border border-[#40392b] transition-colors">
+                        <span
+                          className={`material-symbols-outlined ${tech.color}`}
+                        >
+                          {tech.icon}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-bold text-sm">
+                          {stackName}
+                        </h4>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-white font-bold text-sm">
-                        {stack.name}
-                      </h4>
-                      <p className="text-xs text-gray-500">{stack.type}</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>

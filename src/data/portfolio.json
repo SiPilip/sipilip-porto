@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "slug": "diskominfo-palembang",
+    "title": "Portal Resmi & Sistem Layanan Infrastruktur Digital",
+    "client": "Dinas Komunikasi dan Informatika Kota Palembang",
+    "year": "2024",
+    "category": "Government / E-Service",
+    "shortDescription": "Solusi satu pintu untuk informasi publik dan manajemen layanan infrastruktur IT pemerintah.",
+    "description": "Platform digital terintegrasi yang berfungsi ganda: sebagai wajah digital pemerintah kota dalam menyebarkan informasi publik, sekaligus sistem manajemen layanan infrastruktur TIK. Sistem ini mendigitalkan alur pengajuan Hosting, SSL, Subdomain, dan pembuatan aplikasi bagi OPD lain, mengubah proses birokrasi manual menjadi alur persetujuan digital yang transparan dan efisien.",
+    "techStack": [
+      "Next.js",
+      "Strapi",
+      "Tailwind CSS",
+      "React.js",
+      "Express",
+      "MySQL"
+    ],
+    "heroImage": "../public/images/projects/diskominfo1.png",
+    "images": [
+      "../public/images/projects/diskominfo1.png",
+      "../public/images/projects/diskominfo2.png",
+      "../public/images/projects/diskominfo3.png"
+    ],
+    "features": [
+      "Sistem Tiket Pengajuan Layanan (Hosting, VPS, Domain, SSL)",
+      "CMS Berita, Artikel & Galeri Terpusat",
+      "Disposisi & Verifikasi Berjenjang (Multi-level Approval)",
+      "Tracking Status Pengajuan Real-time",
+      "Notifikasi Update Status via Email/WhatsApp",
+      "Manajemen Aset Digital Pemkot (Inventaris Subdomain)",
+      "Repository Dokumen Persyaratan (Surat Dinas/SK)",
+      "Manajemen Agenda & Kalender Kegiatan Pemerintah",
+      "Statistik Pengunjung & Analitik Layanan",
+      "Role-Based Access Control (Admin Diskominfo vs Operator OPD)",
+      "Lainnya"
+    ],
+    "demoUrl": "https://diskominfo.palembang.go.id",
+    "repoUrl": "#"
+  },
+  {
+    "id": 2,
+    "slug": "sim-lppm-unsri",
+    "title": "Sistem Informasi Manajemen Penelitian & Pengabdian (SIM-LPPM)",
+    "client": "Universitas Sriwijaya",
+    "year": "2023",
+    "category": "Education / Management System",
+    "shortDescription": "Sistem enterprise untuk manajemen siklus hibah penelitian dosen dan pengabdian masyarakat.",
+    "description": "Mengembangkan sistem terpusat untuk mendigitalkan seluruh siklus hibah penelitian di lingkungan Universitas Sriwijaya. Memfasilitasi ribuan dosen dalam pengajuan proposal, membantu reviewer dalam penilaian online, serta memudahkan administrator dalam monitoring progres (Monev) dan pelaporan beban kerja dosen secara akurat.",
+    "techStack": [
+      "Next.js",
+      "Strapi",
+      "Tailwind CSS",
+      "React.js",
+      "Golang",
+      "MySQL",
+      "Redis"
+    ],
+    "heroImage": "../public/images/projects/lppm1.png",
+    "images": [
+      "../public/images/projects/lppm1.png",
+      "../public/images/projects/lppm2.png",
+      "../public/images/projects/lppm3.png",
+      "../public/images/projects/lppm4.png"
+    ],
+    "features": [
+      "Submission & Validasi Proposal Online",
+      "Sistem Plotting Reviewer Otomatis",
+      "Desk Evaluasi & Verifikasi Administrasi",
+      "Manajemen RAB & Tracking Pencairan Dana",
+      "Monitoring & Evaluasi (Monev) Digital",
+      "Logbook Harian & Laporan Kemajuan",
+      "Manajemen Luaran (Publikasi, HKI, Buku)",
+      "Generator Laporan SINTA & BKD",
+      "Dashboard Statistik Sebaran Penelitian",
+      "Lainnya"
+    ],
+    "demoUrl": "https://sim-lppm.unsri.ac.id",
+    "repoUrl": "#"
+  },
+  {
+    "id": 3,
+    "slug": "sma-methodist-1",
+    "title": "Portal Sekolah & Sistem Informasi Publik",
+    "client": "SMA Methodist 1 Palembang",
+    "year": "2023",
+    "category": "School Profile / Web Portal",
+    "shortDescription": "Wajah digital sekolah untuk branding modern dan pusat informasi bagi siswa serta orang tua.",
+    "description": "Official website yang dirancang untuk modernisasi branding sekolah. Menjembatani komunikasi antara institusi, siswa, dan orang tua melalui akses informasi terpusat. Dilengkapi dengan direktori pengajar, galeri prestasi siswa, serta portal berita kegiatan yang dapat diakses dengan mudah melalui perangkat mobile.",
+    "techStack": [
+      "Next.js",
+      "Tailwind CSS",
+      "React.js",
+      "MongoDB",
+      "Node.js",
+      "Express.js"
+    ],
+    "heroImage": "../public/images/projects/smetsa1.png",
+    "images": [
+      "../public/images/projects/smetsa1.png",
+      "../public/images/projects/smetsa2.png",
+      "../public/images/projects/smetsa3.png",
+      "../public/images/projects/smetsa4.png"
+    ],
+    "features": [
+      "Profil Sekolah & Direktori Guru",
+      "Galeri Prestasi & Ekstrakurikuler",
+      "Agenda Akademik Digital",
+      "Pusat Unduhan Dokumen Siswa"
+    ],
+    "demoUrl": "https://smetsaplg.id",
+    "repoUrl": "#"
+  },
+  {
+    "id": 4,
+    "slug": "arsip-lapas-bengkulu",
+    "title": "Sistem Pengelolaan Arsip Digital",
+    "client": "Lembaga Pemasyarakatan Kelas IIA Bengkulu",
+    "year": "2023",
+    "category": "Government / Archive System",
+    "shortDescription": "Digitalisasi arsip fisik menjadi data yang aman, mudah dicari, dan terorganisir.",
+    "description": "Solusi digital untuk mengatasi masalah penumpukan dokumen fisik di lingkungan Lapas. Sistem ini mengkonversi arsip manual menjadi format digital yang aman, memungkinkan pencarian dokumen dalam hitungan detik, serta memiliki manajemen hak akses bertingkat untuk menjaga kerahasiaan data sensitif lembaga.",
+    "techStack": ["Next.js", "Tailwind CSS", "React.js", "SQLite", "Node.js"],
+    "heroImage": "../public/images/projects/sipahadig1.png",
+    "images": [
+      "../public/images/projects/sipahadig1.png",
+      "../public/images/projects/sipahadig2.png",
+      "../public/images/projects/sipahadig3.png"
+    ],
+    "features": [
+      "Pencarian Dokumen Cepat (Indexing)",
+      "Manajemen Kategori Arsip",
+      "Hak Akses User Bertingkat (Role-Based)",
+      "Log Aktivitas Pengguna (Audit Trail)"
+    ],
+    "demoUrl": "https://sipahadigbengkulu.web.id",
+    "repoUrl": "#"
+  }
+]

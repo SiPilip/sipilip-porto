@@ -13,29 +13,54 @@ const Navbar = () => {
               <span className="material-symbols-outlined">terminal</span>
             </div>
             <h2 className="text-white text-xl font-bold tracking-tight">
-              Philifs.dev
+              sipilip
             </h2>
           </div>
           <nav className="hidden md:flex items-center gap-10">
-            {["about", "work", "skills", "contact"].map((item) => (
-              <Link
-                key={item}
-                to={item}
-                smooth={true}
-                duration={500}
-                className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+            >
+              Tentang
+            </Link>
+            <Link
+              to="work"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+            >
+              Portofolio
+            </Link>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+            >
+              Skills
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+            >
+              Kontak
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
-            <button className="hidden md:flex items-center justify-center gap-2 h-10 px-6 bg-primary hover:bg-white text-background-dark font-bold text-sm rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(199,161,92,0.3)] hover:shadow-[0_0_25px_rgba(199,161,92,0.5)]">
-              <span>Hire Me</span>
+            <a
+              className="hidden md:flex items-center justify-center gap-2 h-10 px-6 bg-primary hover:bg-white text-background-dark font-bold text-sm rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(199,161,92,0.3)] hover:shadow-[0_0_25px_rgba(199,161,92,0.5)]"
+              href="https://api.whatsapp.com/send/?phone=%2B6285380557667&text=Halo!&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <span>Kolaborasi</span>
               <span className="material-symbols-outlined text-lg">
-                arrow_outward
+                handshake
               </span>
-            </button>
+            </a>
             <button
               className="md:hidden p-2 text-white hover:text-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -49,18 +74,42 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background-dark border-b border-[#40392b]/30">
           <nav className="flex flex-col p-4 space-y-4">
-            {["about", "work", "skills", "contact"].map((item) => (
-              <Link
-                key={item}
-                to={item}
-                smooth={true}
-                duration={500}
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
-              >
-                {item}
-              </Link>
-            ))}
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+            >
+              Tentang
+            </Link>
+            <Link
+              to="work"
+              smooth={true}
+              duration={500}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+            >
+              Portofolio
+            </Link>
+            <Link
+              to="skills"
+              smooth={true}
+              duration={500}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+            >
+              Skills
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+            >
+              Kontak
+            </Link>
           </nav>
         </div>
       )}

@@ -1,4 +1,5 @@
 import React from "react";
+import { DiMongodb, DiNodejsSmall, DiReact } from "react-icons/di";
 
 const Hero = () => {
   return (
@@ -18,37 +19,40 @@ const Hero = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
               <span className="text-xs font-medium tracking-wider text-primary uppercase">
-                Available for work
+                Available
               </span>
             </div>
             <div className="space-y-2">
               <p className="text-gray-400 text-lg md:text-xl font-light">
-                Hello, I am Philifs Bryan Sipahutar
+                Halo, saya Philifs Bryan Sipahutar
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white">
-                Full-Stack{" "}
+                Developer{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#eecf8f]">
                   MERN
                 </span>{" "}
-                Developer
+                Full-Stack
               </h1>
             </div>
             <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-body border-l-2 border-primary/20 pl-4 lg:pl-6 text-left">
-              Blending modern engineering with cultural elegance. I transform
-              complex problems into sophisticated, user-friendly web
-              applications featuring robust architecture and elegant design
-              patterns.
+              Full-stack developer yang berfokus membangun aplikasi web modern
+              dan handal. Membantu instansi serta bisnis mendigitalkan layanan
+              mereka dengan solusi teknologi yang efektif dan mudah digunakan.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start pt-2">
-            <button className="w-full sm:w-auto px-8 h-12 bg-primary text-background-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_4px_14px_0_rgba(199,161,92,0.39)]">
-              <span>Let's Collaborate</span>
+            <a
+              className="w-full sm:w-auto px-8 h-12 bg-primary text-background-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-[0_4px_14px_0_rgba(199,161,92,0.39)]"
+              href="https://api.whatsapp.com/send/?phone=%2B6285380557667&text=Halo!&type=phone_number&app_absent=0"
+              target="_blank"
+            >
+              <span>Mari Berkolaborasi</span>
               <span className="material-symbols-outlined text-[20px]">
                 handshake
               </span>
-            </button>
+            </a>
             <button className="w-full sm:w-auto px-8 h-12 border border-gray-600 hover:border-primary hover:text-primary text-gray-300 font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 bg-background-dark/50 backdrop-blur-sm">
-              <span>View Portfolio</span>
+              <span>Lihat Portofolio</span>
               <span className="material-symbols-outlined text-[20px]">
                 visibility
               </span>
@@ -56,14 +60,12 @@ const Hero = () => {
           </div>
           <div className="pt-8 border-t border-gray-800/50 mt-4 flex flex-col items-center lg:items-start gap-4">
             <span className="text-xs font-medium text-gray-500 uppercase tracking-widest">
-              Tech Stack Arsenal
+              Teknologi
             </span>
             <div className="flex gap-6 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
               {/* Icons would ideally use SVG components or images. Using text for now as in original HTML */}
               <div className="flex flex-col items-center gap-2 group">
-                <span className="material-symbols-outlined text-3xl group-hover:text-[#4DB33D] transition-colors">
-                  database
-                </span>
+                <DiMongodb className="material-symbols-outlined text-3xl group-hover:text-[#4DB33D] transition-all" />
                 <span className="text-[10px] hidden group-hover:block transition-all">
                   MongoDB
                 </span>
@@ -77,17 +79,13 @@ const Hero = () => {
                 </span>
               </div>
               <div className="flex flex-col items-center gap-2 group">
-                <span className="material-symbols-outlined text-3xl group-hover:text-[#61DAFB] transition-colors">
-                  code_blocks
-                </span>
+                <DiReact className="material-symbols-outlined text-3xl group-hover:text-[#61DAFB] transition-colors" />
                 <span className="text-[10px] hidden group-hover:block transition-all">
                   React
                 </span>
               </div>
               <div className="flex flex-col items-center gap-2 group">
-                <span className="material-symbols-outlined text-3xl group-hover:text-[#339933] transition-colors">
-                  deployed_code
-                </span>
+                <DiNodejsSmall className="material-symbols-outlined text-3xl group-hover:text-[#339933] transition-colors" />
                 <span className="text-[10px] hidden group-hover:block transition-all">
                   Node.js
                 </span>
@@ -105,7 +103,7 @@ const Hero = () => {
             <img
               alt="Philifs Bryan Sipahutar"
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAOoo1TSIzQvo2GEA6D7IS1e98D_FYluc-XsTEVWSGPsj8foH68KUNoqOCFt1dIop5P3FzB8LHs66FLKzEB4kwQsLdhfBV50Bi_yvPNTdhod4i-4y2ajvlaq6PGkGM4q1HNCpJg6WNk7qmqI4FNF5CA-sGDhQGJRee7IzEOSZpZ-CsQWegAgRW2FXW2J301Oa1nx6tpS45g2BDndjZDTmVEXJrM4C_dKvMCKdqC1Zk0iVMtj1ukfiDurDXr_-4jzoohOFQfr0DwX0"
+              src="../../../public/images/profilepicture.jpg"
             />
             <div className="absolute bottom-6 left-6 right-6 p-4 bg-background-dark/90 backdrop-blur-md rounded-xl border border-primary/20 z-30 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
               <div className="flex items-center gap-4">
@@ -115,12 +113,8 @@ const Hero = () => {
                   </span>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-white">
-                    Verified Expert
-                  </p>
-                  <p className="text-xs text-gray-400">
-                    5+ Years of Experience
-                  </p>
+                  <p className="text-sm font-bold text-white">Berpengalaman</p>
+                  <p className="text-xs text-gray-400">Pengalaman 3+ Tahun</p>
                 </div>
               </div>
             </div>
@@ -129,7 +123,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 hidden lg:flex flex-col items-center gap-2 animate-bounce opacity-50 z-20">
         <span className="text-[10px] uppercase tracking-widest text-primary/80">
-          Scroll Down
+          Gulir ke Bawah
         </span>
         <span className="material-symbols-outlined text-primary">
           keyboard_arrow_down
