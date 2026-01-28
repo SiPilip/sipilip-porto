@@ -16,11 +16,11 @@
       "Express",
       "MySQL"
     ],
-    "heroImage": "../public/images/projects/diskominfo1.png",
+    "heroImage": "/images/projects/diskominfo1.png",
     "images": [
-      "../public/images/projects/diskominfo1.png",
-      "../public/images/projects/diskominfo2.png",
-      "../public/images/projects/diskominfo3.png"
+      "/images/projects/diskominfo1.png",
+      "/images/projects/diskominfo2.png",
+      "/images/projects/diskominfo3.png"
     ],
     "features": [
       "Sistem Tiket Pengajuan Layanan (Hosting, VPS, Domain, SSL)",
@@ -56,12 +56,12 @@
       "MySQL",
       "Redis"
     ],
-    "heroImage": "../public/images/projects/lppm1.png",
+    "heroImage": "/images/projects/lppm1.png",
     "images": [
-      "../public/images/projects/lppm1.png",
-      "../public/images/projects/lppm2.png",
-      "../public/images/projects/lppm3.png",
-      "../public/images/projects/lppm4.png"
+      "/images/projects/lppm1.png",
+      "/images/projects/lppm2.png",
+      "/images/projects/lppm3.png",
+      "/images/projects/lppm4.png"
     ],
     "features": [
       "Submission & Validasi Proposal Online",
@@ -95,12 +95,12 @@
       "Node.js",
       "Express.js"
     ],
-    "heroImage": "../public/images/projects/smetsa1.png",
+    "heroImage": "/images/projects/smetsa1.png",
     "images": [
-      "../public/images/projects/smetsa1.png",
-      "../public/images/projects/smetsa2.png",
-      "../public/images/projects/smetsa3.png",
-      "../public/images/projects/smetsa4.png"
+      "/images/projects/smetsa1.png",
+      "/images/projects/smetsa2.png",
+      "/images/projects/smetsa3.png",
+      "/images/projects/smetsa4.png"
     ],
     "features": [
       "Profil Sekolah & Direktori Guru",
@@ -121,11 +121,11 @@
     "shortDescription": "Digitalisasi arsip fisik menjadi data yang aman, mudah dicari, dan terorganisir.",
     "description": "Solusi digital untuk mengatasi masalah penumpukan dokumen fisik di lingkungan Lapas. Sistem ini mengkonversi arsip manual menjadi format digital yang aman, memungkinkan pencarian dokumen dalam hitungan detik, serta memiliki manajemen hak akses bertingkat untuk menjaga kerahasiaan data sensitif lembaga.",
     "techStack": ["Next.js", "Tailwind CSS", "React.js", "SQLite", "Node.js"],
-    "heroImage": "../public/images/projects/sipahadig1.png",
+    "heroImage": "/images/projects/sipahadig1.png",
     "images": [
-      "../public/images/projects/sipahadig1.png",
-      "../public/images/projects/sipahadig2.png",
-      "../public/images/projects/sipahadig3.png"
+      "/images/projects/sipahadig1.png",
+      "/images/projects/sipahadig2.png",
+      "/images/projects/sipahadig3.png"
     ],
     "features": [
       "Pencarian Dokumen Cepat (Indexing)",

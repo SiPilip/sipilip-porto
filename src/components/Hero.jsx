@@ -103,7 +103,7 @@ const Hero = () => {
             <img
               alt="Philifs Bryan Sipahutar"
               className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              src="../../../public/images/profilepicture.jpg"
+              src="/images/profilepicture.jpg"
             />
             <div className="absolute bottom-6 left-6 right-6 p-4 bg-background-dark/90 backdrop-blur-md rounded-xl border border-primary/20 z-30 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 shadow-xl">
               <div className="flex items-center gap-4">
