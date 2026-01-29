@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background-dark/80 border-b border-[#40392b]/30">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-background-dark/80 border-b border-gray-200 dark:border-[#40392b]/30 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors duration-300">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors duration-300">
               <span className="material-symbols-outlined">terminal</span>
             </div>
-            <h2 className="text-white text-xl font-bold tracking-tight">
+            <h2 className="text-gray-900 dark:text-white text-xl font-bold tracking-tight">
               sipilip
             </h2>
           </div>
@@ -21,7 +23,7 @@ const Navbar = () => {
               to="about"
               smooth={true}
               duration={500}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
             >
               Tentang
             </Link>
@@ -29,7 +31,7 @@ const Navbar = () => {
               to="work"
               smooth={true}
               duration={500}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
             >
               Portofolio
             </Link>
@@ -37,7 +39,7 @@ const Navbar = () => {
               to="skills"
               smooth={true}
               duration={500}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
             >
               Skills
             </Link>
@@ -45,14 +47,29 @@ const Navbar = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize"
             >
               Kontak
             </Link>
           </nav>
           <div className="flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:text-primary hover:border-primary transition-colors duration-300 mr-2"
+              aria-label="Toggle Theme"
+            >
+              {theme === "dark" ? (
+                <span className="material-symbols-outlined text-[20px]">
+                  light_mode
+                </span>
+              ) : (
+                <span className="material-symbols-outlined text-[20px]">
+                  dark_mode
+                </span>
+              )}
+            </button>
             <a
-              className="hidden md:flex items-center justify-center gap-2 h-10 px-6 bg-primary hover:bg-white text-background-dark font-bold text-sm rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(199,161,92,0.3)] hover:shadow-[0_0_25px_rgba(199,161,92,0.5)]"
+              className="hidden md:flex items-center justify-center gap-2 h-10 px-6 bg-primary hover:bg-white text-white dark:text-background-dark font-bold text-sm rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(199,161,92,0.3)] hover:shadow-[0_0_25px_rgba(199,161,92,0.5)]"
               href="https://api.whatsapp.com/send/?phone=%2B6285380557667&text=Halo!&type=phone_number&app_absent=0"
               target="_blank"
             >
@@ -62,7 +79,7 @@ const Navbar = () => {
               </span>
             </a>
             <button
-              className="md:hidden p-2 text-white hover:text-primary"
+              className="md:hidden p-2 text-gray-900 dark:text-white hover:text-primary"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="material-symbols-outlined">menu</span>
@@ -72,14 +89,14 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background-dark border-b border-[#40392b]/30">
+        <div className="md:hidden bg-white dark:bg-background-dark border-b border-gray-200 dark:border-[#40392b]/30">
           <nav className="flex flex-col p-4 space-y-4">
             <Link
               to="about"
               smooth={true}
               duration={500}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
             >
               Tentang
             </Link>
@@ -88,7 +105,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
             >
               Portofolio
             </Link>
@@ -97,7 +114,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
             >
               Skills
             </Link>
@@ -106,7 +123,7 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
+              className="text-gray-600 dark:text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer capitalize block"
             >
               Kontak
             </Link>

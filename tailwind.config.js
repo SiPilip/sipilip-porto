@@ -6,9 +6,14 @@ export default {
     extend: {
       colors: {
         primary: "#c7a15c",
-        "background-light": "#f8f7f6",
+        "background-light": "#f8f7f4", // Premium off-white
         "background-dark": "#1e1a14",
         charcoal: "#131313",
+        // Semantic Colors for Theme
+        "surface-light": "#ffffff", // Pure white for cards
+        "surface-dark": "#1e1a14",
+        "text-light": "#1a1612", // Sharp dark
+        "text-dark": "#ffffff",
       },
       fontFamily: {
         display: ["Space Grotesk", "sans-serif"],

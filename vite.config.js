@@ -8,5 +8,6 @@ export default defineConfig({
     port: 4001,
     host: "0.0.0.0", // Ini krusial agar bisa diakses secara network
     strictPort: true,
+    allowedHosts: ["sipilip.my.id", ".sipilip.my.id"], // Mengizinkan semua subdomain juga
   },
 });
