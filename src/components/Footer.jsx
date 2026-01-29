@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="inline-block p-3 rounded-full bg-primary/10 text-primary mb-4">
             <span className="material-symbols-outlined">mail</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-text-light dark:text-white">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Mari Bangun Sesuatu yang Luar Biasa
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-10 text-lg">
@@ -29,7 +29,7 @@ const Footer = () => {
                   id="name"
                   type="text"
                   placeholder="John Doe"
-                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-text-light dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
+                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
                 />
               </div>
               <div>
@@ -43,7 +43,7 @@ const Footer = () => {
                   id="email"
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-text-light dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
+                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
                 />
               </div>
               <div>
@@ -57,7 +57,7 @@ const Footer = () => {
                   id="message"
                   rows="4"
                   placeholder="Ceritakan tentang proyek Anda..."
-                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-text-light dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
+                  className="w-full bg-white dark:bg-[#1a1612] border border-gray-300 dark:border-[#40392b] rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder-gray-400 dark:placeholder-gray-600"
                 ></textarea>
               </div>
               <button

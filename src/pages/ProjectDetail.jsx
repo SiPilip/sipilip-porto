@@ -3,27 +3,26 @@ import { Link, useParams } from "react-router-dom";
 import portfolioData from "../data/portfolio.json";
 
 // Helper map for Tech Stack icons/colors
-// Helper map for Tech Stack icons/colors
 const techConfig = {
-  React: { icon: "code_blocks", color: "text-blue-400" },
+  React: { icon: "code_blocks", color: "text-blue-500" },
   "Node.js": { icon: "terminal", color: "text-green-600" },
   MongoDB: { icon: "database", color: "text-green-500" },
-  "Express.js": { icon: "dns", color: "text-white" },
-  Mapbox: { icon: "map", color: "text-blue-300" },
-  "Tailwind CSS": { icon: "style", color: "text-cyan-400" },
+  "Express.js": { icon: "dns", color: "text-gray-500 dark:text-white" },
+  Mapbox: { icon: "map", color: "text-blue-400" },
+  "Tailwind CSS": { icon: "style", color: "text-cyan-500" },
   Laravel: { icon: "code", color: "text-red-500" },
-  "Vue.js": { icon: "code_blocks", color: "text-green-400" },
-  "PHP Native": { icon: "php", color: "text-purple-400" },
+  "Vue.js": { icon: "code_blocks", color: "text-green-500" },
+  "PHP Native": { icon: "php", color: "text-purple-500" },
   "CodeIgniter 4": { icon: "fire_hydrant", color: "text-orange-500" },
-  Bootstrap: { icon: "style", color: "text-purple-500" },
-  MySQL: { icon: "database", color: "text-blue-500" },
-  PostgreSQL: { icon: "database", color: "text-blue-300" },
+  Bootstrap: { icon: "style", color: "text-purple-600" },
+  MySQL: { icon: "database", color: "text-blue-600" },
+  PostgreSQL: { icon: "database", color: "text-blue-400" },
   Redis: { icon: "database", color: "text-red-500" },
-  jQuery: { icon: "javascript", color: "text-blue-400" },
-  "Next.js": { icon: "layers", color: "text-white" },
-  Strapi: { icon: "api", color: "text-blue-500" },
-  Golang: { icon: "code", color: "text-cyan-500" },
-  default: { icon: "memory", color: "text-gray-400" },
+  jQuery: { icon: "javascript", color: "text-blue-500" },
+  "Next.js": { icon: "layers", color: "text-gray-800 dark:text-white" },
+  Strapi: { icon: "api", color: "text-blue-600" },
+  Golang: { icon: "code", color: "text-cyan-600" },
+  default: { icon: "memory", color: "text-gray-500" },
 };
 
 const ProjectDetail = () => {
@@ -36,7 +35,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background-dark text-white">
+      <div className="min-h-screen flex items-center justify-center bg-white dark:bg-background-dark text-gray-900 dark:text-white">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Proyek Tidak Ditemukan</h1>
           <Link to="/" className="text-primary hover:underline">
@@ -48,21 +47,21 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-text-light dark:text-white transition-colors duration-300">
+    <div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-gray-900 dark:text-white transition-colors duration-300">
       {/* Navbar */}
       <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-[#40392b] bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm transition-colors duration-300">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-10 py-3">
           <div className="flex items-center justify-between whitespace-nowrap">
             <Link
               to="/"
-              className="flex items-center gap-4 text-text-light dark:text-white group"
+              className="flex items-center gap-4 text-gray-900 dark:text-white group"
             >
               <div className="size-6 text-primary group-hover:scale-110 transition-transform">
                 <span className="material-symbols-outlined !text-2xl">
                   arrow_back
                 </span>
               </div>
-              <h2 className="text-text-light dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+              <h2 className="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
                 Kembali ke Portofolio
               </h2>
             </Link>
@@ -108,7 +107,7 @@ const ProjectDetail = () => {
         >
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
-              <h1 className="text-text-light dark:text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
+              <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
                 {project.title}
               </h1>
               <span className="bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded border border-primary/20">
@@ -132,7 +131,7 @@ const ProjectDetail = () => {
               href={project.demoUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal hover:bg-[#b08d4b] transition-all shadow-lg shadow-primary/20"
+              className="flex cursor-pointer items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white dark:text-background-dark text-base font-bold leading-normal hover:bg-[#b08d4b] transition-all shadow-lg shadow-primary/20"
             >
               <span className="material-symbols-outlined text-xl">preview</span>
               <span>Pratinjau</span>
@@ -160,7 +159,7 @@ const ProjectDetail = () => {
             alt={project.title}
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-light/80 dark:from-background-dark/80 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-background-dark/80 via-transparent to-transparent"></div>
           <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border border-gray-200 dark:border-[#40392b] rounded-lg p-3 flex items-center gap-3 shadow-lg">
             <div className="bg-primary/20 p-2 rounded-md text-primary">
               <span className="material-symbols-outlined">dashboard</span>
@@ -169,7 +168,7 @@ const ProjectDetail = () => {
               <p className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold">
                 Kategori
               </p>
-              <p className="text-sm font-bold text-text-light dark:text-white">
+              <p className="text-sm font-bold text-gray-900 dark:text-white">
                 {project.category}
               </p>
             </div>
@@ -213,7 +212,7 @@ const ProjectDetail = () => {
                       </span>
                     </div>
                     <div>
-                      <h3 className="text-text-light dark:text-white text-lg font-bold leading-tight">
+                      <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight">
                         {feature}
                       </h3>
                     </div>
@@ -255,7 +254,7 @@ const ProjectDetail = () => {
               className="bg-white dark:bg-surface-dark border border-gray-200 dark:border-[#40392b] rounded-xl p-6 sticky top-24 shadow-lg dark:shadow-none"
               data-aos="fade-left"
             >
-              <h3 className="text-text-light dark:text-white text-xl font-bold mb-6 border-b border-gray-200 dark:border-[#40392b] pb-3">
+              <h3 className="text-gray-900 dark:text-white text-xl font-bold mb-6 border-b border-gray-200 dark:border-[#40392b] pb-3">
                 Tech Stack
               </h3>
               <div className="space-y-4">
@@ -271,7 +270,7 @@ const ProjectDetail = () => {
                         </span>
                       </div>
                       <div>
-                        <h4 className="text-text-light dark:text-white font-bold text-sm">
+                        <h4 className="text-gray-900 dark:text-white font-bold text-sm">
                           {stackName}
                         </h4>
                       </div>
