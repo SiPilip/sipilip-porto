@@ -9,10 +9,7 @@ const Portfolio = () => {
       id="work"
     >
       <div className="w-full max-w-[1200px] flex flex-col gap-10">
-        <div
-          className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-gray-200 dark:border-white/10 pb-8"
-          data-aos="fade-up"
-        >
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-gray-200 dark:border-white/10 pb-8">
           <div className="flex flex-col gap-3 max-w-2xl">
             <p className="text-primary text-sm font-bold uppercase tracking-widest">
               Portofolio

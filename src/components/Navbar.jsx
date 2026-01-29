@@ -55,18 +55,12 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:text-primary hover:border-primary transition-colors duration-300 mr-2"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-white/5 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all duration-300 group mr-2"
               aria-label="Toggle Theme"
             >
-              {theme === "dark" ? (
-                <span className="material-symbols-outlined text-[20px]">
-                  light_mode
-                </span>
-              ) : (
-                <span className="material-symbols-outlined text-[20px]">
-                  dark_mode
-                </span>
-              )}
+              <span className="material-symbols-outlined text-[22px] transform group-hover:rotate-180 transition-transform duration-500">
+                {theme === "dark" ? "light_mode" : "dark_mode"}
+              </span>
             </button>
             <a
               className="hidden md:flex items-center justify-center gap-2 h-10 px-6 bg-primary hover:bg-white text-white dark:text-background-dark font-bold text-sm rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(199,161,92,0.3)] hover:shadow-[0_0_25px_rgba(199,161,92,0.5)]"
